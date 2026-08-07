@@ -1,15 +1,15 @@
-# filepath
+# macabre_filepath
 
-Work with file paths in Gleam!
+A fork of [filepath](https://github.com/lpil/filepath) for the [macabre](https://github.com/dusty-phillips/macabre) Gleam-to-Python compiler.
 
-[![Package Version](https://img.shields.io/hexpm/v/filepath)](https://hex.pm/packages/filepath)
-[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/filepath/)
-
-This package works on both Unix and Windows systems, and can run on both Erlang
-or JavaScript runtimes.
+The Gleam logic is copied directly from the upstream Apache-2.0 licensed
+[filepath](https://github.com/lpil/filepath) package. The only change is that
+the single external function, `is_windows`, is implemented as a Python binding
+in `src/filepath_bindings.py` rather than Erlang/JavaScript FFI.
 
 ```sh
-gleam add filepath
+# not published to hex; depend on it via git in a macabre project
+gleam add macabre_filepath --git git@github.com:dusty-phillips/macabre_filepath.git
 ```
 ```gleam
 import filepath
@@ -19,5 +19,3 @@ pub fn main() {
   // -> "/home/lucy/pokemon-cards"
 }
 ```
-
-Documentation can be found here: <https://hexdocs.pm/filepath>.

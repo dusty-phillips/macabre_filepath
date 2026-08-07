@@ -1,6 +1,7 @@
-name = "filepath"
+name = "macabre_filepath"
 version = "1.1.2"
-description = "Work with file paths in Gleam!"
+
+description = "Work with file paths in Gleam (macabre python-target port)"
 licences = ["Apache-2.0"]
 repository = { type = "github", user = "lpil", repo = "filepath" }
 links = [
